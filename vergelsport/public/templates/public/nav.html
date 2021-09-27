@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="navSuperior">
+  <img src="{% static 'public/img/logo.png' %}" class="logoNavSuperior" alt="VergelSport"> 
+</div>
+
+
+<div class="navLateral p-5 text-light">
+  <ul class="menuNav">
+    <li>
+      <a href="{% url 'home' %}"  id="inicio" >INICIO</a>
+    </li>
+    <li>
+      <a href="{% url 'servicios' %}" id="servicios" >SERVICIOS</a>
+    </li>
+    <li>
+      <a href="{% url 'conoceme' %}" id="conoceme" >CONOCEME</a>
+    </li>
+    <li>
+      <a href="{% url 'opiniones' %}" id="opiniones" >OPINIONES</a>
+    </li>
+    <li>
+      <a href="{% url 'contacto' %}" id="contacto" >CONTACTO</a>
+    </li>
+  </ul>
+</div>

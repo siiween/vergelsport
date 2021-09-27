@@ -1,0 +1,66 @@
+{% extends "public/base.html" %}
+{% load static %}
+
+
+{% block javascript %} 
+	 <script type="text/javascript" src="{% static 'public/js/navInicio.js' %}"></script>
+{% endblock %}
+
+
+{% block content %} 
+
+<style>
+    #inicio{
+        color: #e2cf84;
+    }
+</style>
+  
+
+  <div class="imagenInicio" style="background: url('{% static 'public/img/fotoInicio.jpg' %}') no-repeat;background-size: cover; background-position: center !important;"></div></div>
+
+
+
+
+  <div class="container">
+  
+   
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="eslogan text-light p-5 my-5">
+                "MI OASIS <br>
+                MATERNAL<br>
+                ACOGE TU <br>
+                SER"
+            </div>
+        </div>
+
+
+        
+
+   
+
+     
+				
+        <div class="col-md-6 offset-md-2 imagenSecundariaInicio p-md-5 p-4"> 
+            <div style="background: url({% static 'public/img/fotoPrueba2.jpg'%}) no-repeat;background-size: cover; background-position: bottom !important;"></div>
+        </div>
+
+           <div class="col-md-4 p-md-5 offset-md-4 p-4 imagenPequenaInicio">
+            <div style="background: url({% static 'public/img/fotoPrueba.jpg'%}) no-repeat;background-size: cover; background-position:center !important;"></div>
+        </div>
+
+
+        <div class="col-md-6 offset-md-4 imagenSecundariaInicio p-md-5 p-4"> 
+            <div style="background: url({% static 'public/img/fotoPrueba2.jpg'%}) no-repeat;background-size: cover; background-position: center !important;"></div>
+        </div>
+
+
+
+
+
+    </div>
+
+  </div>
+{% endblock %}

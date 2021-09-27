@@ -1,0 +1,242 @@
+
+
+body{
+    font-family: 'EB Garamond',serif;
+     background-color: #0f0f0f !important;
+}
+
+.bg-dark {
+    background-color: #1f1e1e !important;
+}
+
+.cuerpo{
+    position: relative;
+    width: calc(100%);
+    left: 0;
+     z-index: 99;
+}
+/*
+NAV 
+*/
+
+.navSuperior{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: transparent;
+    z-index: 100;
+    transition: 1s;
+}
+
+.navSuperior.active {
+    position: fixed;
+    height: 150px;
+    top:0;
+    left: 0;
+    transition: 1s;
+}
+
+.logoNavSuperior {
+    transition: 1s;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     transition: 1s;
+}
+
+.logoNavSuperior.active{
+    height: 75px;
+    top: 50%;
+    left: auto;
+    right: 50px;
+    transform: translate(0, -50%);
+     transition: 1s;
+}
+
+
+.navLateral{
+    position: fixed;
+    height: calc(100vh - 200px);
+    left: 0;
+    top: 200px;
+    width: auto;
+    background:transparent;
+    z-index: 100;
+     transition: 1s;
+}
+
+
+.navLateral.active {
+    position: fixed;
+    width: auto;
+    height: 150px;
+    left: 0;
+    top: 0;
+    background: transparent;
+    z-index: 100;
+     transition: 1s;
+}
+
+
+.menuNav li,
+.menuNav li a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 35px;
+    color: #f2f2f2;
+     transition: 1s;
+}
+
+.menuNav.active li,
+.menuNav.active li a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f2f2f2;
+    padding-right: 10px;
+     transition: 1s;
+}
+
+.menuNav.active {
+    display: inline-flex;
+     transition: 1s;
+}
+
+/*
+
+===== FOOTER
+
+*/
+
+
+
+
+footer {
+    color: #fff;
+    background: #000;
+}
+
+footer a {
+    color: #f2f2f2;
+    font-weight: 300;
+}
+
+
+
+footer a:hover {
+    color: #f2f2f2;
+    text-decoration: none;
+    opacity: .7
+}
+
+
+
+/* --------------------------------
+= INICIO
+--------------------------------- */
+
+.imagenInicio{
+    height: 100vh;
+    width: 100%;
+}
+
+
+.eslogan{
+    text-align: center;
+    font-size: 50px;
+}
+
+.imagenSecundariaInicio{
+    height: 600px;
+}
+.imagenPequenaInicio{
+    height: 350px;
+}
+.imagenPequenaInicio div,
+.imagenSecundariaInicio div {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* --------------------------------
+= CONTACTO
+--------------------------------- */
+
+
+
+.textoFormulario {
+    color: #fff;
+    display: block;
+    margin: 0 0 .5rem;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.4285714285714286;
+    letter-spacing: .4px;
+    font-family: 'Karla', serif;
+}
+
+.formularioContacto {
+    background: #222;
+    background-clip: padding-box;
+    border: 1px solid #3a3a3a;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #19110b;
+    height: 3rem;
+    text-align: left;
+    font-family: "karla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 2;
+    letter-spacing: .4px;
+    transition: border .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    padding: 0 1rem;
+    line-height: 3rem;
+    width: 100%;
+}
+
+.formularioContactoTel {
+    width: 100px !important;
+    float: left;
+}
+
+.formularioContactoTel2 {
+    width: calc(100% - 110px) !important;
+    margin-left: 10px;
+    float: left;
+}
+
+.formalioContactoArea {
+    height: 200px;
+    resize: none;
+}
+
+@media (max-width: 767px) {
+    .alerta {
+        width: calc(100vw - 40px) !important;
+        position: fixed !important;
+        bottom: 0px !important;
+        z-index: 99999 !important;
+        right: 20px;
+        border: 1px solid #424242 !important;
+        background-color: #424242 !important;
+        color: #222 !important;
+    }
+
+    .formularioContactoTel {
+        width: 80px !important;
+    }
+
+    .formularioContactoTel2 {
+        width: calc(100% - 90px) !important;
+    }
+}
