@@ -21,20 +21,13 @@ $(window).scroll(function(){
 
 
 
-/*
-if ($(this).scrollTop() > 72 &&  $(this).scrollTop() < 110){
-	$('.bottomNav, .mainNav').addClass("active1");
-	$('.bottomNav, .mainNav').removeClass("active2");
-	$('.centerNav, .minicon, .goToTop').removeClass("active");
-}
-else if ($(this).scrollTop() >= 110){
-	$('.bottomNav, .mainNav').addClass("active2");
-	$('.bottomNav, .mainNav').removeClass("active1");
-	$('.centerNav, .mainNav, .minicon').addClass("active");
-}
-else {
-	$('.bottomNav, .mainNav').removeClass("active1");
-	$('.bottomNav, .mainNav').removeClass("active2");
-	$('.centerNav, .mainNav, .minicon').removeClass("active");
-}
-*/
+$('#activeMenu').click(function () {
+	if($('.navLateral').hasClass('active')){
+		$('.navLateral, .menuPalo1, .menuPalo2, .menuPalo3').removeClass('active');
+		$('html').css('overflow-y', 'scroll');
+	}
+	else{
+		$('.navLateral, .menuPalo1, .menuPalo2, .menuPalo3').addClass('active');
+		$('html').css('overflow-y', 'hidden');
+	}
+});
