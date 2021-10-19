@@ -347,6 +347,12 @@ footer a:hover {
 }
 
 @media (max-width: 767px) {
+    .imagenInicio{
+        height: 300px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
     .alerta {
         width: calc(100vw - 40px) !important;
         position: fixed !important;
