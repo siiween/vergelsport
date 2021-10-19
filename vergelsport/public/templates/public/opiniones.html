@@ -24,53 +24,70 @@
                 <div class="col-12 mt-md-4 mt-2 p-0 mb-4">
                     <h1>QUÉ OPINAN NUESTROS CLIENTES</h1>
                 </div>
-                <div class="col-12 bg-dark p-4 mb-3">
-                    <p> <b>  Raúl Sigüenza Sánchez </b></p>
-                    <small class="text-muted">
-                      Un excelente servicio mezclado con un trato excepcional, además una calidad precio inmejorable. <br>
-                      Volveré pronto seguro.
-                    </small>
-                    <h5 class="mb-0 mt-2">
-                        &#9733;  &#9733;  &#9733;  &#9733;  &#9733;
-                    </h5>
-                </div>
 
-                <div class="col-12 bg-dark p-4 mb-3">
-                    <p> <b>  Juan Carlos Martínez</b></p>
-                    <small class="text-muted">
-                      Uno de los mejores sitios donde he ido, que aun siendo muy pequeño me resultó muy acogedor.
-                    </small>
-                    <h5 class="mb-0 mt-2">
-                        &#9733;  &#9733;  &#9733;  &#9733;  &#9733;
-                    </h5>
+                <div class="col-12 p-0">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
 
 
 
+                {% for comentario in comentarios %}
+                    <div class="col-12 bg-dark p-4 mb-3">
+                        <p> <b>  {{comentario.nombre}} {{comentario.apellidos}} </b></p>
+                        <small class="text-muted">
+                        {{comentario.comentario}}
+                        </small>
+                        <h5 class="mb-0 mt-2">
+                            {% if comentario.puntuacion == 1%}
+                                &#9733; 
+                            {% elif comentario.puntuacion == 2%}
+                                &#9733; &#9733; 
+                            {% elif comentario.puntuacion == 3%}
+                                &#9733; &#9733; &#9733; 
+                            {% elif comentario.puntuacion == 4%}
+                                &#9733; &#9733; &#9733; &#9733; 
+                            {% else %}
+                                &#9733; &#9733; &#9733; &#9733; &#9733; 
+                            {% endif %}
+                        </h5>
+                    </div>
+                {% endfor %}
+                
+
+
+
+
+
 
                 <div class="col-12 bg-dark p-4 mb-3">
 
-	                <form method="post" action="">{% csrf_token %}
+	                <form method="post" action="{% url 'crearOpinion' %}">{% csrf_token %}
                         <p>Escribe una nueva opinión</p>
                         <div class="row g-3">
                             <div class="col-sm-6">
                             <label for="firstName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                            <input type="text" class="text-light formularioContacto" name="nombre" id="nombre" placeholder="" value="" required>
                             </div>
                 
                             <div class="col-sm-6">
                             <label for="lastName" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                            <input type="text" class="text-light  formularioContacto" name="apellidos" id="apellidos" placeholder="" value="" required>
                             </div>
 
                             <div class="col-12">
                                 <label for="opinion" class="form-label">Comentario</label>
-                                <textarea type="text" class="form-control" id="opinion" placeholder="" value="" required></textarea>
+                                <textarea type="text" class="text-light formularioContacto" name="comentario" id="comentario" placeholder="" value="" required></textarea>
                             </div>
 
                             <div class="col-6">
                                 <label for="opinion" class="form-label">Puntuación</label>
-                                <select class="form-select" id="country" required>
+                                <select class="form-select formularioContacto text-light" name="puntuacion" id="puntuacion" required>
                                     <option value="1">1 estrella</option>
                                     <option value="2">2 estrellas</option>
                                     <option value="3">3 estrellas</option>
